@@ -22,6 +22,7 @@ project's own skill (`<repo>/.claude/skills/<name>/`), not here.
 | **`research-companion`** | The learn role. Explaining a codebase at the user's pace, graded literature work, re-deriving the builder's numbers before believing them. |
 | **`project-audit`** | The audit role. Checking claims against the filesystem rather than against conversation. Never briefed by the sessions it audits. |
 | **`study-notes`** | Turning a study session into atomic Obsidian notes with a linking index. |
+| **`publishing-to-github`** | Publishing a repo and keeping it updated: the checks before an irreversible first push, and explaining every subsequent one — what changed, why, and what a user should do differently. |
 | **`skill-maintenance`** | Keeping all of the above alive: when to patch, which layer a lesson belongs in, how to port the set to a new project, and the ways editing a skill breaks it. |
 
 ## Suggested load order
@@ -43,6 +44,9 @@ project's version; you will import facts that are false there and read as author
 
 Carry the failure modes, not the findings. *"Two runs agreeing to four decimal places is
 a symptom"* travels between projects. A specific measured value does not.
+
+Changes to this repo are explained in `CHANGELOG.md`, newest first, with corrections
+quoting the wording they replace.
 
 ## Where they came from
 
