@@ -118,6 +118,20 @@ Make the ledger machine-checkable, and mind two traps that both bit on first con
 A retraction that never arrives is worse than the original mistake, because it has
 already been acted on.
 
+## 4b. An authorisation that lives only in a transcript cannot be audited
+
+Outward-facing, irreversible or billable actions — publishing something publicly,
+deleting data, provisioning paid resources — get a **durable record on disk**: what the
+user was asked, what they answered, when, and who acted. A short ledger is enough.
+
+The reason is structural, not bureaucratic. The auditing session cannot read the
+conversation where the authorisation was given, **and must not be briefed on it** — being
+told turns it into a participant. So without a record it has exactly two options, both
+wrong: assume the action was wanted, or accuse. The one it should have is to check.
+
+This surfaced when an auditor could confirm that a public repository contained nothing
+sensitive, but could not confirm anyone had asked before making it public.
+
 ## 5. What everyone owes everyone
 
 **build →** changes that invalidate an explanation (log them first), archived or
