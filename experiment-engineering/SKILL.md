@@ -76,6 +76,25 @@ Key on a content fingerprint and namespace by dataset.
 Treat suspiciously clean agreement as a symptom: two runs matching to four decimal
 places is not reassurance, it is usually the same cache read twice.
 
+## 4b. Prove a guard has teeth without arming the hazard
+
+A check that passes because it found nothing is worthless, so always verify a new guard
+by making it fail. **But do not create the real hazard in the real artefact to do it.**
+
+Testing a leak detector by planting a real secret in the live file, then reverting, is a
+window in which an interruption, a background sync or an autocommit publishes it. The
+revert usually works. "Usually" is not the standard for something whose failure is
+irreversible.
+
+Instead: plant the trigger in a scratch copy, or reimplement the match against the real
+configuration in a throwaway directory. You get the same evidence — the guard fires on
+input it should fire on — with no interval during which the thing you are guarding
+against is actually true.
+
+This is the general rule: **the test for a guard against an irreversible outcome must
+not pass through that outcome.** It applies to deletion guards, spend limits, and
+publication filters alike.
+
 ## 5. Reporting to someone who will act on it
 
 - **Direction before precision.** If a result points against the hypothesis, say so in
