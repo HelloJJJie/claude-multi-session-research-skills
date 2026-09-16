@@ -75,6 +75,12 @@ see what it was buying.
 - **A cross-reference outlives what it points at.** Renaming or splitting a skill leaves
   references that read perfectly. Grep for the old name across every file that could
   mention it, including project docs and other skills.
+- **An unanchored string replace hits every match, including the ones you forgot
+  about.** Inserting a section before `## 2026-09-06` also matched
+  `## 2026-09-06 — initial publication`, so the new block landed twice, byte for
+  byte, and shipped that way. Anchor on a string unique in the file, pass a count,
+  or match a whole line — and **re-read the file afterwards**. Scripted edits are
+  not self-verifying; an edit that raises no error can still be wrong.
 - **Growth is a failure mode.** A skill nobody reads to the end protects nothing. When
   adding, check whether the new rule subsumes an existing one and merge rather than
   append; when a section stops earning its length, cut it.

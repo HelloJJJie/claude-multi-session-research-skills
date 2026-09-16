@@ -74,6 +74,11 @@ is not the standard for something irreversible.
 - **Verify what actually landed**, not what you intended to send: list the remote tree
   and confirm local `HEAD` equals `origin/main`. A commit that exists locally is not
   published.
+- **That checks the transport, not the content.** A duplicated section once shipped and
+  stayed public for nine days with a flawless push: `HEAD` matched `origin/main`, the
+  tree listed correctly, and the file was wrong — a scripted edit had matched a prefix
+  twice. **Re-read the files you changed before pushing**, especially ones edited by
+  script rather than by hand.
 
 ## 6. Do not push
 
