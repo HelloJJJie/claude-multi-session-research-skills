@@ -72,6 +72,11 @@ see what it was buying.
   log *first*. Diff section by section, not by impression.
 - **The same clause in several files drifts.** Prefer one home and pointers. If a clause
   must be duplicated, say in each copy where the others are.
+- **A reference to something you meant to write next.** Writing *"described in the
+  changelog under today's date"* and then not writing the entry produces a document
+  that is confidently wrong, and reads as authoritative because the pointer is
+  specific. The reference and the thing it points at are one unit of work; finish
+  both or write neither.
 - **A cross-reference outlives what it points at.** Renaming or splitting a skill leaves
   references that read perfectly. Grep for the old name across every file that could
   mention it, including project docs and other skills.

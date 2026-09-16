@@ -6,6 +6,27 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-09-16 (later) — two more
+
+### Added — `research-software-practices` §2: make the dependency files enforce the split
+
+Documenting "two environments, deliberately" while shipping one `requirements.txt`
+containing both sets guarantees the obvious command violates it. A project doing exactly
+that ended up with torch beside numpy 2.x in the environment documented as having no
+torch, where it **half works**: tensor operations run, `torch.from_numpy` raises.
+
+**A half-working install is worse than a missing one** — it passes every "is it
+available?" guard, so optional-dependency skips never fire and the suite reports more
+passes than it actually ran. That is how a test count of 53 was published when one
+environment ran 49 and the other 53.
+
+### Added — `skill-maintenance` §4: a reference to something you meant to write next
+
+Writing *"described in the changelog under today's date"* and then not writing the entry
+produces a document that is confidently wrong and reads as authoritative, because the
+pointer is specific. Found by an auditor following the pointer. **The reference and the
+thing it points at are one unit of work.**
+
 ## 2026-09-16 (later) — fix
 
 ### Fixed — a duplicated section in this file

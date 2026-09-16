@@ -42,8 +42,15 @@ Pin the environment and record the exact command that created it. For a paper, a
 Freeze a lock file alongside the ranges, and say in the README which is authoritative.
 
 When a platform forces an ugly split — two environments because a dependency has no
-build for this OS, say — **write down why in the README**. The next person will
-otherwise "simplify" it back into a broken state.
+build for this OS, say — **write down why in the README, and make the dependency files
+enforce it.** Documenting "two environments" while shipping one `requirements.txt`
+containing both sets guarantees the split will be violated by the obvious command. One
+file per environment, and a top-level file that refuses to be installed and says which
+to pick.
+
+A half-working install is worse than a missing one: a package that imports but cannot
+do its job passes every "is it available?" guard, so optional-dependency skips never
+fire and a test suite reports more passes than it really ran.
 
 ## 3. Test what you claim
 
