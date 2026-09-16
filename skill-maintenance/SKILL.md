@@ -26,6 +26,14 @@ Patch when any of these happened *and* the text did not prevent it:
 **Do not patch** for one-off project trivia, or for something already covered — re-read
 the relevant section before adding anything.
 
+**And if the rule you are writing describes a live instance, fix the instance in the
+same session.** Documenting a hazard is not removing it, and using the still-open case
+as the worked example makes the document read as though it had been handled — to you
+most of all. A skill once gained a clause saying to prefer the anonymised version of a
+lesson, illustrated by a specific identifying figure that was sitting unredacted two
+files away, and had been for ten days. An auditor noticed; the author, having just
+written the rule, did not. **Write the rule second.**
+
 ## 2. Which layer does the lesson belong in
 
 | | goes in the **generic** skill | goes in the **project** layer |

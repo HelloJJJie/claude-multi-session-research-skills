@@ -6,6 +6,22 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-09-16 (last) — writing the rule is not doing the thing
+
+### Added — `skill-maintenance` §1: fix the live instance in the same session
+
+Yesterday's entry added a clause saying that anonymising a lesson usually costs nothing
+and to prefer the version without the numbers — **illustrated with a specific
+identifying figure that was, and still is, sitting unredacted in another file in this
+same repository, public for ten days.** An auditor noticed. The author, having just
+written the rule, did not.
+
+Documenting a hazard is not removing it, and using the still-open case as the worked
+example makes the document read as though it were handled — to the person who wrote it
+most of all.
+
+**Do differently:** fix the instance first, write the rule second.
+
 ## 2026-09-16 (later still) — correction to the record
 
 ### Corrected — the previous commit carried an unrelated change
