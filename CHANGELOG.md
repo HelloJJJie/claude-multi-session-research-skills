@@ -6,6 +6,42 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-09-16
+
+### Added — `research-software-practices`
+
+The codebase, as distinct from the record of a run (`experiment-provenance`) and from
+diagnosing a result (`experiment-engineering`): project layout, an explicit environment
+with a lock file, tests, code written for humans, a README that states the scientific
+contract, and one documented command from clone to figures.
+
+Distilled from a graduate handout on software practices for scientific computing, kept
+only where it was not already covered and sharpened with what this set had learned.
+
+**The section that earned its place is §3, and one rule inside it:**
+
+> **A verification you ran once by hand and never again is not a test.**
+
+A project using these skills had verified, by hand and once each, that a padding mask
+was correct to 0.003%, that a corpus yielded exactly its published utterance count, that
+two significance tests agreed on synthetic data, and that a confidence interval
+contained its own estimate. All four were recorded in its notes as *"verifications worth
+keeping in mind rather than repeating"* — which is exactly backwards. Each costs seconds
+to run forever and each was silently at risk from every later refactor. The project had
+no `tests/` directory at all.
+
+**Do differently:** when you verify something by hand and feel pleased about it, that is
+the moment to make it a test, not to write a note saying it was checked. Scientific code
+makes this cheap, because the science supplies the properties — a degenerate
+self-comparison must return zero, an interval must contain its estimate, a padded batch
+must match the same item alone.
+
+### Changed — `experiment-engineering`
+
+Its §1 (your own pipeline is the first suspect) now says that the fix for a pipeline
+artefact is not only to correct the result but **to add the test that would have caught
+it**. Every artefact listed there was findable by a property test.
+
 ## 2026-09-06
 
 ### Added — `publishing-to-github`
@@ -45,6 +81,42 @@ participant. Without a record its only options are to assume or to accuse.
 
 **Do differently:** keep an authorisations file in the project, not only the answer in
 the conversation.
+
+## 2026-09-16
+
+### Added — `research-software-practices`
+
+The codebase, as distinct from the record of a run (`experiment-provenance`) and from
+diagnosing a result (`experiment-engineering`): project layout, an explicit environment
+with a lock file, tests, code written for humans, a README that states the scientific
+contract, and one documented command from clone to figures.
+
+Distilled from a graduate handout on software practices for scientific computing, kept
+only where it was not already covered and sharpened with what this set had learned.
+
+**The section that earned its place is §3, and one rule inside it:**
+
+> **A verification you ran once by hand and never again is not a test.**
+
+A project using these skills had verified, by hand and once each, that a padding mask
+was correct to 0.003%, that a corpus yielded exactly its published utterance count, that
+two significance tests agreed on synthetic data, and that a confidence interval
+contained its own estimate. All four were recorded in its notes as *"verifications worth
+keeping in mind rather than repeating"* — which is exactly backwards. Each costs seconds
+to run forever and each was silently at risk from every later refactor. The project had
+no `tests/` directory at all.
+
+**Do differently:** when you verify something by hand and feel pleased about it, that is
+the moment to make it a test, not to write a note saying it was checked. Scientific code
+makes this cheap, because the science supplies the properties — a degenerate
+self-comparison must return zero, an interval must contain its estimate, a padded batch
+must match the same item alone.
+
+### Changed — `experiment-engineering`
+
+Its §1 (your own pipeline is the first suspect) now says that the fix for a pipeline
+artefact is not only to correct the result but **to add the test that would have caught
+it**. Every artefact listed there was findable by a property test.
 
 ## 2026-09-06 — initial publication
 

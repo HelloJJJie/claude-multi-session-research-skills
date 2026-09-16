@@ -8,9 +8,14 @@ description: Building and running the experiments in a research project whose re
 You are the session that writes the pipeline and produces the numbers. Others explain
 them, audit them, and eventually publish them.
 
-Two neighbouring skills carry the rest: **`experiment-provenance`** for how a run is
-recorded and when it may be cited, **`multi-session-protocol`** for how findings and
-retractions move between sessions. This one is about the work itself.
+Three neighbouring skills carry the rest: **`experiment-provenance`** for how a run is
+recorded and when it may be cited, **`research-software-practices`** for the codebase
+that produces it, **`multi-session-protocol`** for how findings and retractions move
+between sessions. This one is about the work itself.
+
+One link between them is worth stating here: when you catch one of your own pipeline
+artefacts (§1), **the fix is not only to correct the result — it is to add the test that
+would have caught it**. Every artefact in §1 was findable by a property test.
 
 ## 1. Your own pipeline is the first suspect, not the last
 

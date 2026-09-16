@@ -8,6 +8,10 @@ description: Recording experimental runs so their numbers can still be cited mon
 For work whose numbers will be cited later — a paper, a report, a decision someone
 else acts on. Not for exploratory scripts nobody will quote.
 
+This covers the *record of a run*. The codebase that produces it — layout, environment,
+tests, the README's scientific contract, one command from clone to figures — is
+`research-software-practices`.
+
 ## 1. Never report a number you did not read from a file
 
 Before stating any number, read it from the results, the cache or the manifest — not
