@@ -27,6 +27,19 @@ already fetched. Treat the first push as one-way.
 3. **Sweep the history, not just the working tree.** A file deleted in a later commit
    is still in the earlier one. If history contains anything sensitive, squash or start
    a fresh repo rather than pushing and rewriting after.
+
+   **This is why step 3 comes before the first push and not after.** Once something is
+   published, editing the file does not unpublish it: the old text sits in the commit
+   that introduced it, one `git log -p` or one click in the web UI away. Redaction
+   after the fact changes what people *read*, which is worth doing and is most of the
+   benefit — but it does not change what is *retrievable*, and describing it as "fixed"
+   overstates it.
+
+   Rewriting history to remove it is largely theatre once the repo has been public for
+   any length of time: clones, forks, caches and archives already hold the old objects,
+   and it contradicts the rule against rewriting pushed history. **Say the accurate
+   thing instead: the exposure happened, it is not reversible, and the remaining action
+   is to stop it appearing where people actually look.**
 4. **Write down that permission was given** — what was asked, what was answered, when.
    An authorisation that exists only in the conversation cannot be verified by anyone
    later, including an auditing session that must not be briefed to find out.

@@ -6,6 +6,23 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-09-16 (really last) — redaction is not unpublication
+
+### Added — `publishing-to-github` §1.3: editing a published file does not edit history
+
+A detail was anonymised in the working tree and reported as the fix. It is not: the
+original text sits in the commit that introduced it, on the public branch, one
+`git log -p` away and browsable in the web UI. Raised by the session whose file it was,
+after two others — including an auditor — had treated the working-tree edit as
+resolution.
+
+Rewriting history to remove it is largely theatre once a repo has been public for any
+length of time, and contradicts this file's own rule against rewriting pushed history.
+
+**Do differently:** say the accurate thing. The exposure happened and is not reversible;
+the remaining action is to stop it appearing where people actually look. That is worth
+doing and is most of the benefit — it is just not the same as undoing it.
+
 ## 2026-09-16 (last) — writing the rule is not doing the thing
 
 ### Added — `skill-maintenance` §1: fix the live instance in the same session
