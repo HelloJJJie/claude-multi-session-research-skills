@@ -65,6 +65,18 @@ And when verifying such a guard, do not create the hazard in the live directory 
 it. Plant the trigger in a scratch copy instead — the revert usually works, and "usually"
 is not the standard for something irreversible.
 
+**And `git add -A` stages whatever anyone else is doing there.** A live directory shared
+with concurrent sessions is being edited while you commit. A sweeping add publishes their
+work-in-progress under your commit message, so the history describes it wrongly, and a
+half-finished edit goes public along with it. This has happened: a substantive rule
+another session was writing was published inside a commit about something unrelated, and
+neither session knew until an auditor mentioned it in passing.
+
+**Stage by path when the directory is shared.** `git status` before committing, and if
+files you did not touch appear, stop and ask whose they are — do not assume they are
+stale. Rewriting the pushed history to fix attribution is worse than the original
+mistake; correct the record forward instead.
+
 ## 5. Mechanics that waste time otherwise
 
 - `gh auth login` authenticates `gh` but does **not** configure git's credential helper.

@@ -6,6 +6,26 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-09-16 (later still) — correction to the record
+
+### Corrected — the previous commit carried an unrelated change
+
+`dbb0531`, whose message describes environment splits and dangling references, also
+contains a one-line addition to `study-notes/SKILL.md` — a rule about not merging
+separate atomic units into one note — **written by a different session and swept up by
+`git add -A`**. The content is sound and stays; the commit message does not describe it,
+and the history is not being rewritten to hide that.
+
+### Added — `publishing-to-github` §4: `git add -A` stages what others are doing
+
+A live directory shared with concurrent sessions is being edited while you commit. A
+sweeping add publishes their work-in-progress under your message, and a half-finished
+edit goes public with it.
+
+**Do differently:** stage by path when the directory is shared; run `git status` first,
+and if files you did not touch appear, ask whose they are rather than assuming they are
+stale.
+
 ## 2026-09-16 (later) — two more
 
 ### Added — `research-software-practices` §2: make the dependency files enforce the split
