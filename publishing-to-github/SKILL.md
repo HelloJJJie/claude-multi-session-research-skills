@@ -16,6 +16,14 @@ already fetched. Treat the first push as one-way.
    commit messages* — for identity, credentials, private paths, client or employer
    names, and unpublished results. Commit messages are published and are routinely
    forgotten.
+
+   **A term denylist catches names, not identifying details.** "6,210 scripted
+   utterances, of which only three distinct sentences" contains no proper noun and
+   passes every keyword sweep, while anyone who knows the corpus recognises it
+   immediately. Anonymising a lesson usually costs nothing — the teaching value is in
+   the mechanism, not the figures — so **prefer the version without the numbers**, and
+   where a specific detail earns its place, that is a decision for whoever owns the
+   unpublished work, not for whoever is writing the file.
 3. **Sweep the history, not just the working tree.** A file deleted in a later commit
    is still in the earlier one. If history contains anything sensitive, squash or start
    a fresh repo rather than pushing and rewriting after.
@@ -72,10 +80,15 @@ half-finished edit goes public along with it. This has happened: a substantive r
 another session was writing was published inside a commit about something unrelated, and
 neither session knew until an auditor mentioned it in passing.
 
+**It also destroys the authorship record, so you then attribute it wrongly.** Once the
+change is inside your commit, `git log -S` finds one commit — yours — with a committer
+and no author. There is nothing left to check against, so the guess you make when
+writing it up cannot be verified, and the first guess here was wrong.
+
 **Stage by path when the directory is shared.** `git status` before committing, and if
-files you did not touch appear, stop and ask whose they are — do not assume they are
-stale. Rewriting the pushed history to fix attribution is worse than the original
-mistake; correct the record forward instead.
+files you did not touch appear, **stop and ask whose they are** — do not assume they are
+stale, and do not assume you know. Rewriting the pushed history to fix attribution is
+worse than the original mistake; correct the record forward instead.
 
 ## 5. Mechanics that waste time otherwise
 

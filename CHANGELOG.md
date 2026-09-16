@@ -12,9 +12,15 @@ you remember is still true.
 
 `dbb0531`, whose message describes environment splits and dangling references, also
 contains a one-line addition to `study-notes/SKILL.md` — a rule about not merging
-separate atomic units into one note — **written by a different session and swept up by
-`git add -A`**. The content is sound and stays; the commit message does not describe it,
-and the history is not being rewritten to hide that.
+separate atomic units into one note — **swept up by `git add -A`**. The content is
+sound and stays; the commit message does not describe it, and the history is not being
+rewritten to hide that.
+
+**Correction, same day:** an earlier version of this entry said the line was "written by
+a different session". **That claim cannot be supported.** `git log -S` finds the text in
+exactly one commit — mine — so the repository holds a committer and no author. The
+session I attributed it to says it never edited that file. Who wrote it is now
+unrecoverable, which is itself the point of the rule below.
 
 ### Added — `publishing-to-github` §4: `git add -A` stages what others are doing
 
