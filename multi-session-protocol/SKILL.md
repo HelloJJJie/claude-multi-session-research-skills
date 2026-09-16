@@ -52,6 +52,15 @@ Every number that reaches a document carries both, in the text:
   both true of the same runs, of one metric and of all metrics. A count without its
   scope is not a claim; it is a coincidence waiting to be misquoted.
 
+**What you say a peer did or thought is a claim too**, held to the same standard, and
+the easiest kind to make carelessly because it reads as narration rather than assertion.
+Two in two consecutive commits once, **the second inside the commit correcting the
+first**: one attributed an anonymous change to a session that had not made it, the next
+said an auditor had shared a mistake it had in fact warned about beforehand. The same
+sentences would have been checked had they contained a number. **Quote them, check, or
+write only your own part** — and in a published commit message the error is immutable
+and can only be corrected forward.
+
 **A peer's number is a lead, not a source.** Re-derive it from the file before putting
 it in a document. This has failed in both directions: one session widened another's
 correctly-scoped count into a wrong one; another ran a methodologically correct

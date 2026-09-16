@@ -6,6 +6,25 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-09-16 — correction, and the pattern behind it
+
+### Corrected — an inaccurate attribution in the previous commit message
+
+`cbdad79` says the redaction point was raised *"after an auditor and I had both treated
+a working-tree edit as resolution."* **The auditor had done no such thing** — it drew
+the documented-is-not-fixed line before any redaction existed to evaluate, and said so.
+The sentence is true of me alone. It caught this itself. Commit messages are immutable
+once pushed, so this is the correction.
+
+### Added — `multi-session-protocol` §2: what you say a peer did is a claim too
+
+Two unsupported attributions in two consecutive commits, **the second inside the commit
+correcting the first**. Claims about who did or thought what read as narration rather
+than assertion, which is exactly why they slip through: the same sentence would have
+been checked had it contained a number.
+
+**Do differently:** quote them, check, or write only your own part.
+
 ## 2026-09-16 (really last) — redaction is not unpublication
 
 ### Added — `publishing-to-github` §1.3: editing a published file does not edit history
