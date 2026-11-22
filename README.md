@@ -21,6 +21,9 @@ project's own skill (`<repo>/.claude/skills/<name>/`), not here.
 | **`experiment-provenance`** | Append-only run directories; what a run's metadata must answer; when a result may not be cited; grading design decisions A/B/C; pre-registering before the run. |
 | **`research-companion`** | The learn role. Explaining a codebase at the user's pace, graded literature work, re-deriving the builder's numbers before believing them. |
 | **`project-audit`** | The audit role. Checking claims against the filesystem rather than against conversation. Never briefed by the sessions it audits. |
+| **`paper-review`** | The reviewer role for a paper draft another session wrote: trace every number, term, method claim and citation to its source; claim→evidence; methods/statistics in a fixed order; five-part findings sent to the writer, who fixes. |
+| **`paper-writing`** | The writer role for a paper: inventory the experiments, decide the paper's type, survey how published papers of the same topic and type are structured, borrow that structure, and get a narrative plan approved before drafting. |
+| **`paper-figures`** | Data figures for a paper: what the figure must argue before choosing a chart; SciencePlots IEEE style at the final printed size; captions that state every band and n; reading the rendered PNG before export. |
 | **`study-notes`** | Turning a study session into atomic Obsidian notes with a linking index. |
 | **`research-software-practices`** | The codebase itself: project layout, an explicit environment, tests that would catch a wrong scientific conclusion, a README stating the scientific contract, one command from clone to figures. |
 | **`publishing-to-github`** | Publishing a repo and keeping it updated: the checks before an irreversible first push, and explaining every subsequent one — what changed, why, and what a user should do differently. |
@@ -32,6 +35,8 @@ project's own skill (`<repo>/.claude/skills/<name>/`), not here.
 build   multi-session-protocol → experiment-engineering → experiment-provenance → <project skill>
 learn   multi-session-protocol → research-companion → <project skill>
 audit   multi-session-protocol → project-audit → <project skill>
+review  multi-session-protocol → paper-review (+ paper-figures for figures) → <project skill>
+write   multi-session-protocol → paper-writing (+ literature-survey, paper-figures) → <project skill>
 ```
 
 State it in the project's `CLAUDE.md` so a fresh session gets it without being told.

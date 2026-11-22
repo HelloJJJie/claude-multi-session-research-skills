@@ -6,6 +6,20 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-11-22 — `paper-writing`, `paper-figures`, `paper-review`: first publication
+
+### Added
+- **`paper-writing`**: the writer role. Inventory the experiments, decide the paper's type, survey how published papers of the same topic, type and venue are written section by section, get a narrative plan approved, then draft at the exemplars' density. Includes the fixed abstract and introduction orders, results paragraphs that run observation → explanation → meaning, a conclusion that interprets rather than restates, a compression procedure that maps each kept claim to its support before cutting, and a humanizer pass on every finished draft.
+- **`paper-figures`**: data figures. The one sentence a figure argues comes first; SciencePlots IEEE style at the printed size; colour by role; captions in the venue's form with every band, n and reference line stated; an illustrative example placed in its distribution before anyone sees it; reading the rendered figure before export.
+- **`paper-review`**: the reviewer role for a draft another session wrote. Six independent trace checks, claim → evidence, methods and statistics in a fixed order, findings that carry exact replacement text, and an independent mock panel run at the target venue's standard, once on every compressed draft before it is called final.
+- **README**: the three skills in the table, and the `review` and `write` role lines.
+
+### Why
+These skills had been used across several papers in a home project but never published. The latest additions came from one short paper whose structure and wording were revised section by section against its exemplars, and whose compression cut a caveat that only a venue-standard mock panel caught.
+
+### What to do
+A writing session loads `multi-session-protocol`, then `paper-writing`; a reviewing session loads `paper-review`. `paper-writing` refers to `literature-survey` and `academic-humanizer`, which are not in this repository yet; follow those steps with your own equivalents until they are published.
+
 ## 2026-09-16 — correction, and the pattern behind it
 
 ### Corrected — an inaccurate attribution in the previous commit message
