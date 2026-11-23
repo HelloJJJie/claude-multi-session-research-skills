@@ -6,6 +6,16 @@ reader who already uses these skills should do differently.
 Corrections quote the old wording, because otherwise you cannot tell whether the thing
 you remember is still true.
 
+## 2026-11-22 (later) — `paper-writing`, `paper-review`: framing, titles, short-paper results, calibrated panels
+
+### Changed
+- **`paper-writing` §5**: frame a borrowed tool as the field's method papers do (problem in the field's terms, design choices with field reasons, tool cited only as a tool, no "our mechanism is that of X"); titles name the insight or method plus the task in the venue's plain style; a short paper's results can be one narrative subsection; a claim from an earlier experiment is checked to have been measured on the system the paper reports, and an unsupported claim is not written as a result, also not in a preprint.
+- **`paper-review` §3**: a resampling-based share must reproduce the observed analogue in its own world before it is read.
+- **`paper-review` §5c**: conference panels are calibrated to real reviewers (PDF only, one read, 200–400 words, at most three concerns, no common-practice concerns, no extra experiments unless a claim lacks support, reviewers from the venue's community).
+
+### Why
+The same short paper: a forecasting comparison invited "off-the-shelf" novelty scores; a title pulled reviewers from another community; three results subsections read as fragments; a proposed sentence rested on numbers from a different predictor version; a bootstrap share was retracted; and mock panels asked questions real venue reviewers would not.
+
 ## 2026-11-22 — `paper-writing`, `paper-figures`, `paper-review`: first publication
 
 ### Added
