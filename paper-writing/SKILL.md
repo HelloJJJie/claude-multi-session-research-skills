@@ -297,6 +297,35 @@ plan later is cheap; changing a finished draft's structure is a rewrite.
   parenthesis, set two responses to the same problem side by side with no contrast, and
   leaned on a preprint. Several review rounds that checked every number had passed it;
   the reader who commissioned the paper found all four in one read.
+- **Frame a borrowed tool the way method papers in the field do.** State the problem in the
+  field's terms ("we frame X as a tracking problem"), derive the model from an observation in
+  your own data, and give each design choice its reason in the field (why this observation,
+  why this reset, why this constraint). Cite the tool's origin as a tool. Never write "our
+  mechanism is that of <other field>", and do not add a sentence comparing the method with the
+  tool's use in another field: it tells the reviewer the method is off the shelf. Evidence: a
+  draft wrote "the mechanism is that of forecast post-processing" and added a forecasting
+  comparison; the state-space reviewer of every mock panel scored novelty 2. The exemplars cite
+  their particle-filter and neural-ODE sources only as tools.
+- **Title: insight or method plus task, in the venue's plain style.** Name what the paper does
+  ("tracking predictor bias from sparse reviews") and the task; avoid words that send reviewers
+  to another community (for a speech venue, "human–machine", "state-space"). Evidence: a title
+  with "human–machine" drew annotation-process reviewers; after the reframe the title was
+  rewritten to match the paper's contribution.
+- **A short paper's results can be one narrative subsection.** After the evaluation
+  methodology, one subsection with a finding as its heading, whose paragraphs chain: the main
+  result and why baselines fail → where the gain comes from → what it means for the user of
+  the output → how to use it (for example where to place labels) → robustness. Each paragraph
+  opens with a sentence that picks up the previous one. Evidence: three finding-headed
+  subsections in a 4-page paper read as fragments; merged into one story they read like the
+  exemplars and freed two heading lines.
+- **Before writing a claim from an earlier experiment, check it was measured on the system
+  the paper reports** (the same predictor version, refinement, loss and split). If not, the
+  number cannot be quoted even "as a number only": a reader will compare it with the paper's
+  own tables. A claim with no supporting run is not written as a result, also not in a
+  preprint (a preprint is public and permanent); at most as an expectation marked "should"
+  in future work, until a spec'd run supports it. Evidence: a proposed "rejection without
+  review beats random" sentence rested on numbers from the raw predictor, whose baseline loss
+  was twice the paper's; on the paper's predictor the closest evidence showed no difference.
 - **Results paragraphs interpret; they do not list numbers.** Each paragraph runs
   observation → explanation → meaning:
   1. **Observation**: the finding, with the one or two numbers that carry it. Every other

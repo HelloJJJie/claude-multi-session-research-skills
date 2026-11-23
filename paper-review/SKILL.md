@@ -239,6 +239,13 @@ paper. Record the ruling in the review file and do not raise it again for that d
    reviewer proposed, and later approved, π_t/π_s for heads trained with class-weighted
    cross-entropy; a cold-read referee caught it.
 7. Interpretation and generalisation.
+   **A resampling-based share must reproduce the observed quantity in its own world.** Before
+   reading "x of the gain comes from Y" off a bootstrap, check that the bootstrap reproduces the
+   observed analogue (for example, the same-group gain when reviewer and answer coincide). If it
+   does not, the share is unreadable: comparing a real-world level with a bootstrap-world level
+   crosses two worlds. Evidence: a paper claimed two thirds of a gain came from the raters' own
+   offset; the bootstrap gave −20.79 where the observed analogue was −10.51, and the share was
+   retracted.
 
 Escalate rather than bluff when a central claim rests on a method outside competence;
 say which claim and what expertise.
@@ -318,6 +325,23 @@ rounds and share the writer's framing.
 - Evidence: a first "objective" venue subagent was briefed with the paper's headline result and
   a supervisor's line calling it the more valuable paper. The user asked whether it was really
   independent, and it was only partly so.
+
+**Calibrate a conference panel to real reviewers.** A panel briefed with full access writes like an
+auditor, not like a reviewer, and its questions are ones a real reviewer would never ask.
+- Give each reviewer the PDF only: no source files, result notes or exports. One read, at the effort a
+  real reviewer spends (an hour or two).
+- 200–400 words per review; at most three major concerns, each one a reader notices on a single read.
+  No re-deriving statistics, no checking source files.
+- Ask for an experiment only when a claim in the paper lacks support, never because more could be done.
+- Before writing a concern, ask whether it is common practice or a limitation most papers at the venue
+  share (existing tools, one dataset, simulated rather than live users, details cut for space). If it is,
+  it is not a concern; at most one line among the limitations. Raising it is over-criticism (user ruling).
+- Score as the venue does: "uses existing tools", "one dataset", "few baselines" are common in accepted
+  conference method papers and are not by themselves grounds to reject.
+- Draw every reviewer from the venue's own community.
+Evidence: four conference-standard panels on a 4-page speech paper, briefed with paths to the PDF and
+its source, raised bootstrap theory, variance calibration and window-length sensitivity; the user judged
+that real reviewers at the venue would not ask these.
 
 **Panel, chosen for the venue.**
 - R1 is an insider from the community whose practice the paper touches.
